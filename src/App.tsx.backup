@@ -34,12 +34,6 @@ import NearbyStopsPage from './pages/NearbyStopsPage';
 import TripPlannerPage from './pages/TripPlannerPage';
 import RideComparePage from './pages/RideComparePage';
 
-declare module 'i18next' {
-  interface CustomTypeOptions {
-    returnNull: false;
-  }
-}
-
 const theme = createTheme({
   palette: {
     primary: {
@@ -82,7 +76,7 @@ const NavigationDrawer: React.FC<NavigationDrawerProps> = ({ menuItems, onClose,
               }}
             >
               <ListItemIcon>{item.icon}</ListItemIcon>
-              <ListItemText primary={t(item.text as any)} />
+              <ListItemText primary={t(item.text)} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -125,7 +119,7 @@ function App() {
                 <MenuIcon />
               </IconButton>
               <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
-                {t('welcome.title' as any)}
+                San Diego Transit
               </Typography>
               <FormControl size="small" sx={{ minWidth: 120, mr: 2 }}>
                 <Select
@@ -182,10 +176,10 @@ function App() {
               <Route path="/" element={
                 <>
                   <Typography variant="h4" gutterBottom>
-                    {t('welcome.title' as any)}
+                    {t('welcome.title')}
                   </Typography>
                   <Typography variant="subtitle1">
-                    {t('welcome.subtitle' as any)}
+                    {t('welcome.subtitle')}
                   </Typography>
                 </>
               } />
@@ -201,4 +195,3 @@ function App() {
 }
 
 export default App;
-
