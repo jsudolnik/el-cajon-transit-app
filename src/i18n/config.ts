@@ -1,6 +1,12 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
+declare module 'i18next' {
+  interface TFunction {
+    (key: string): string;
+  }
+}
+
 i18n
   .use(initReactI18next)
   .init({
@@ -13,8 +19,8 @@ i18n
             compareRides: 'Compare Rides'
           },
           welcome: {
-            title: 'Welcome to San Diego Transit',
-            subtitle: 'Your guide to public transportation in San Diego'
+            title: 'El Cajon Transit Guide',
+            subtitle: 'Your guide to public transportation in El Cajon'
           },
           pages: {
             nearbyStops: {
@@ -149,4 +155,3 @@ i18n
   });
 
 export default i18n;
-

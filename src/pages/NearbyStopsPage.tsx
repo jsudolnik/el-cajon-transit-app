@@ -62,4 +62,3 @@ const NearbyStopsPage: React.FC = () => {
 };
 
 export default NearbyStopsPage;
-

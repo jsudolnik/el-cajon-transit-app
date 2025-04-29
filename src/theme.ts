@@ -14,7 +14,8 @@ export const theme = createTheme({
     },
   },
   components: {
-    MuiButton: {styleOverrides: {
+    MuiButton: {
+      styleOverrides: {
         root: {
           textTransform: 'none',
         },

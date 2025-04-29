@@ -86,4 +86,3 @@ const RideComparePage: React.FC = () => {
 };
 
 export default RideComparePage;
-
