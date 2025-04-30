@@ -53,14 +53,14 @@ const theme = createTheme({
 
 const drawerWidth = 240;
 
-interface MenuItem {
+interface NavigationMenuItem {
   text: string;
   icon: React.ReactNode;
   path: string;
 }
 
 interface NavigationDrawerProps {
-  menuItems: MenuItem[];
+  menuItems: NavigationMenuItem[];
   onClose: () => void;
   isMobile: boolean;
 }
@@ -73,7 +73,7 @@ const NavigationDrawer: React.FC<NavigationDrawerProps> = ({ menuItems, onClose,
     <div>
       <Toolbar />
       <List>
-        {menuItems.map((item: MenuItem) => (
+        {menuItems.map((item: NavigationMenuItem) => (
           <ListItem key={item.text} disablePadding>
             <ListItemButton
               onClick={() => {
@@ -97,7 +97,7 @@ function App() {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const { t, i18n } = useTranslation();
 
-  const menuItems: MenuItem[] = [
+  const menuItems: NavigationMenuItem[] = [
     { text: 'navigation.nearbyStops', icon: <DirectionsBusIcon />, path: '/nearby' },
     { text: 'navigation.planTrip', icon: <MapIcon />, path: '/plan' },
     { text: 'navigation.compareRides', icon: <CompareArrowsIcon />, path: '/rides' },

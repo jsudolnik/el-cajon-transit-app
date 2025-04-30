@@ -10,11 +10,7 @@ import {
   Chip,
   Stack,
   Autocomplete,
-  Grid,
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem
+  Grid
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -199,12 +195,11 @@ const TripPlannerPage: React.FC = () => {
                 // Simulate trip planning
                 setTimeout(() => {
                   setLoading(false);
-                  alert(`Trip planned from ${fromStop} to ${toStop}!`);
-                }, 1000);
+                }, 1500);
               }}
               disabled={!fromStop || !toStop || loading}
             >
-              {loading ? 'Planning...' : 'Find Routes'}
+              {loading ? 'Planning Trip...' : 'Plan Trip'}
             </Button>
           </Grid>
         </Grid>
