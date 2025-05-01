@@ -35,6 +35,24 @@ i18n
               title: 'Compare Ride Options',
               description: 'Compare different transportation options'
             }
+          },
+          tripPlanner: {
+            popularRoutes: {
+              title: 'Popular Routes',
+              from: 'From',
+              to: 'To'
+            },
+            locations: {
+              startingPoint: 'Starting Point',
+              destination: 'Destination',
+              popularStartingPoints: 'Popular starting points:',
+              popularDestinations: 'Popular destinations:',
+              selectLocation: 'Select or type a location'
+            },
+            buttons: {
+              planTrip: 'Plan Trip',
+              planningTrip: 'Planning Trip...'
+            }
           }
         }
       },
@@ -46,8 +64,8 @@ i18n
             compareRides: 'Comparar Viajes'
           },
           welcome: {
-            title: 'Bienvenido a San Diego Transit',
-            subtitle: 'Su guía de transporte público en San Diego'
+            title: 'Guía de Tránsito de El Cajon',
+            subtitle: 'Su guía de transporte público en El Cajon'
           },
           pages: {
             nearbyStops: {
@@ -62,6 +80,24 @@ i18n
               title: 'Compara Opciones de Viaje',
               description: 'Compara diferentes opciones de transporte'
             }
+          },
+          tripPlanner: {
+            popularRoutes: {
+              title: 'Rutas Populares',
+              from: 'Desde',
+              to: 'Hasta'
+            },
+            locations: {
+              startingPoint: 'Punto de Partida',
+              destination: 'Destino',
+              popularStartingPoints: 'Puntos de partida populares:',
+              popularDestinations: 'Destinos populares:',
+              selectLocation: 'Seleccione o escriba una ubicación'
+            },
+            buttons: {
+              planTrip: 'Planear Viaje',
+              planningTrip: 'Planeando Viaje...'
+            }
           }
         }
       },
@@ -73,8 +109,8 @@ i18n
             compareRides: 'So Sánh Chuyến Đi'
           },
           welcome: {
-            title: 'Chào Mừng Đến Với San Diego Transit',
-            subtitle: 'Hướng dẫn về giao thông công cộng tại San Diego'
+            title: 'Hướng Dẫn Giao Thông El Cajon',
+            subtitle: 'Hướng dẫn về giao thông công cộng tại El Cajon'
           },
           pages: {
             nearbyStops: {
@@ -89,6 +125,24 @@ i18n
               title: 'So Sánh Các Lựa Chọn',
               description: 'So sánh các phương tiện di chuyển khác nhau'
             }
+          },
+          tripPlanner: {
+            popularRoutes: {
+              title: 'Các Tuyến Phổ Biến',
+              from: 'Từ',
+              to: 'Đến'
+            },
+            locations: {
+              startingPoint: 'Điểm Khởi Hành',
+              destination: 'Điểm Đến',
+              popularStartingPoints: 'Các điểm khởi hành phổ biến:',
+              popularDestinations: 'Các điểm đến phổ biến:',
+              selectLocation: 'Chọn hoặc nhập một địa điểm'
+            },
+            buttons: {
+              planTrip: 'Lập Kế Hoạch',
+              planningTrip: 'Đang lập kế hoạch...'
+            }
           }
         }
       },
@@ -100,8 +154,8 @@ i18n
             compareRides: 'Ihambing ang mga Sakay'
           },
           welcome: {
-            title: 'Maligayang Pagdating sa San Diego Transit',
-            subtitle: 'Ang iyong gabay sa pampublikong transportasyon sa San Diego'
+            title: 'Gabay sa Transit ng El Cajon',
+            subtitle: 'Ang iyong gabay sa pampublikong transportasyon sa El Cajon'
           },
           pages: {
             nearbyStops: {
@@ -116,6 +170,24 @@ i18n
               title: 'Ihambing ang mga Opsyon sa Pagsakay',
               description: 'Ihambing ang iba\'t ibang opsyon sa transportasyon'
             }
+          },
+          tripPlanner: {
+            popularRoutes: {
+              title: 'Mga Sikat na Ruta',
+              from: 'Mula',
+              to: 'Papunta'
+            },
+            locations: {
+              startingPoint: 'Pagsisimulan',
+              destination: 'Destinasyon',
+              popularStartingPoints: 'Mga sikat na pagsisimulan:',
+              popularDestinations: 'Mga sikat na destinasyon:',
+              selectLocation: 'Pumili o mag-type ng lokasyon'
+            },
+            buttons: {
+              planTrip: 'Planuhin ang Biyahe',
+              planningTrip: 'Pinaplano ang Biyahe...'
+            }
           }
         }
       },
@@ -127,8 +199,8 @@ i18n
             compareRides: '比较路线'
           },
           welcome: {
-            title: '欢迎使用圣地亚哥交通',
-            subtitle: '您的圣地亚哥公共交通指南'
+            title: '埃尔卡洪交通指南',
+            subtitle: '您在埃尔卡洪的公共交通指南'
           },
           pages: {
             nearbyStops: {
@@ -136,12 +208,30 @@ i18n
               description: '查找附近的公交车和火车站'
             },
             planTrip: {
-              title: '规划行程',
+              title: '规划您的行程',
               description: '使用公共交通规划您的行程'
             },
             compareRides: {
               title: '比较乘车选项',
               description: '比较不同的交通选项'
+            }
+          },
+          tripPlanner: {
+            popularRoutes: {
+              title: '热门路线',
+              from: '从',
+              to: '到'
+            },
+            locations: {
+              startingPoint: '起点',
+              destination: '目的地',
+              popularStartingPoints: '热门起点：',
+              popularDestinations: '热门目的地：',
+              selectLocation: '选择或输入一个地点'
+            },
+            buttons: {
+              planTrip: '规划行程',
+              planningTrip: '正在规划行程...'
             }
           }
         }

@@ -87,7 +87,7 @@ const TripPlannerPage: React.FC = () => {
 
       <Paper sx={{ p: 2, mb: 3 }}>
         <Typography variant="h6" gutterBottom>
-          Popular Routes
+          {t('tripPlanner.popularRoutes.title')}
         </Typography>
         <Grid container spacing={2}>
           {commonTrips.map((trip, index) => (
@@ -104,10 +104,10 @@ const TripPlannerPage: React.FC = () => {
                     {trip.route}
                   </Typography>
                   <Typography variant="body2">
-                    From: {trip.from}
+                    {t('tripPlanner.popularRoutes.from')}: {trip.from}
                   </Typography>
                   <Typography variant="body2">
-                    To: {trip.to}
+                    {t('tripPlanner.popularRoutes.to')}: {trip.to}
                   </Typography>
                 </CardContent>
               </Card>
@@ -120,19 +120,19 @@ const TripPlannerPage: React.FC = () => {
         <Grid container spacing={3}>
           <Grid item xs={12}>
             <Typography variant="subtitle1" gutterBottom>
-              Starting Point
+              {t('tripPlanner.locations.startingPoint')}
             </Typography>
             <Autocomplete
               value={fromStop}
               onChange={(_, newValue) => setFromStop(newValue || '')}
               options={Object.values(popularLocations).flat().map(loc => loc.name)}
               renderInput={(params) => (
-                <TextField {...params} placeholder="Select or type a location" fullWidth />
+                <TextField {...params} placeholder={t('tripPlanner.locations.selectLocation')} fullWidth />
               )}
             />
             <Box sx={{ mt: 2 }}>
               <Typography variant="subtitle2" gutterBottom>
-                Popular starting points:
+                {t('tripPlanner.locations.popularStartingPoints')}
               </Typography>
               <Stack direction="row" spacing={1} sx={{ flexWrap: 'wrap', gap: 1 }}>
                 {popularLocations.transitCenters.map((location) => (
@@ -150,19 +150,19 @@ const TripPlannerPage: React.FC = () => {
 
           <Grid item xs={12}>
             <Typography variant="subtitle1" gutterBottom>
-              Destination
+              {t('tripPlanner.locations.destination')}
             </Typography>
             <Autocomplete
               value={toStop}
               onChange={(_, newValue) => setToStop(newValue || '')}
               options={Object.values(popularLocations).flat().map(loc => loc.name)}
               renderInput={(params) => (
-                <TextField {...params} placeholder="Select or type a location" fullWidth />
+                <TextField {...params} placeholder={t('tripPlanner.locations.selectLocation')} fullWidth />
               )}
             />
             <Box sx={{ mt: 2 }}>
               <Typography variant="subtitle2" gutterBottom>
-                Popular destinations:
+                {t('tripPlanner.locations.popularDestinations')}
               </Typography>
               <Stack spacing={2}>
                 {Object.entries(popularLocations).map(([category, locations]) => (
@@ -199,7 +199,7 @@ const TripPlannerPage: React.FC = () => {
               }}
               disabled={!fromStop || !toStop || loading}
             >
-              {loading ? 'Planning Trip...' : 'Plan Trip'}
+              {loading ? t('tripPlanner.buttons.planningTrip') : t('tripPlanner.buttons.planTrip')}
             </Button>
           </Grid>
         </Grid>
