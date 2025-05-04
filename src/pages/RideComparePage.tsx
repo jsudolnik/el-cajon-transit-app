@@ -21,12 +21,12 @@ const RideComparePage: React.FC = () => {
 
   return (
     <Box sx={{ p: 3 }}>
-      <Typography variant="h4" gutterBottom>
-        {t('pages.compareRides.title')}
-      </Typography>
-      <Typography variant="subtitle1" gutterBottom>
-        {t('pages.compareRides.description')}
-      </Typography>
+<Typography variant="h4" gutterBottom>
+  {t('pages.compareRides.title', { defaultValue: 'Compare Ride Options' })}
+</Typography>
+<Typography variant="subtitle1" gutterBottom>
+  {t('pages.compareRides.description', { defaultValue: 'Compare different transportation options' })}
+</Typography>
 
       <Paper sx={{ p: 2, mt: 2 }}>
         <List>
