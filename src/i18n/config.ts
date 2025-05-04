@@ -23,7 +23,8 @@ away: 'away'
 },
 planTrip: {
 title: 'Plan Your Trip',
-description: 'Plan your journey using public transit'},
+description: 'Plan your journey using public transit'
+},
 compareRides: {
 title: 'Compare Ride Options',
 description: 'Compare different transportation options'
@@ -51,7 +52,8 @@ away: 'بعيد'
 },
 planTrip: {
 title: 'خطط لرحلتك',
-description: 'خطط لرحلتك باستخدام وسائل النقل العام'},
+description: 'خطط لرحلتك باستخدام وسائل النقل العام'
+},
 compareRides: {
 title: 'قارن خيارات الرحلات',
 description: 'قارن بين خيارات النقل المختلفة'
@@ -79,7 +81,8 @@ away: 'ܒܪܝܟ'
 },
 planTrip: {
 title: 'ܬܚܫܒܬܐ ܕܐܘܪܚܐ',
-description: 'ܬܚܫܒ ܐܘܪܚܟ ܒܬܚܒܘܬܐ ܕܟܠܗ ܥܡܐ'},
+description: 'ܬܚܫܒ ܐܘܪܚܟ ܒܬܚܒܘܬܐ ܕܟܠܗ ܥܡܐ'
+},
 compareRides: {
 title: 'ܫܘܝܢܐ ܕܓܒܝܬܐ',
 description: 'ܫܘܝܢܐ ܒܝܢ ܓܒܝܬܐ ܕܬܚܒܘܬܐ ܕܐܢܫܐ'
@@ -106,7 +109,8 @@ description: 'Encuentra paradas de autobús y tren cerca de ti',
 away: 'lejos'
 },
 planTrip: {
-title: 'Planifica tu Viaje',description: 'Planifica tu viaje usando transporte público'
+title: 'Planifica tu Viaje',
+description: 'Planifica tu viaje usando transporte público'
 },
 compareRides: {
 title: 'Compara Opciones de Viaje',
