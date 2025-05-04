@@ -155,6 +155,8 @@ function App() {
                   <MenuItem value="vi">Tiếng Việt</MenuItem>
                   <MenuItem value="tl">Tagalog</MenuItem>
                   <MenuItem value="zh">中文</MenuItem>
+                  <MenuItem value="ar">العربية</MenuItem>
+                  <MenuItem value="arc">ܐܪܡܝܐ (Aramaic)</MenuItem>
                 </Select>
               </FormControl>
             </Toolbar>

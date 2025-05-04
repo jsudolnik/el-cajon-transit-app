@@ -57,7 +57,7 @@ const commonTrips = [
     from: 'Fletcher Parkway & Johnson Avenue',
     to: 'Grossmont Transit Center',
     route: 'Route 115'
-  },
+  }
 ];
 
 const TripPlannerPage: React.FC = () => {
@@ -87,7 +87,7 @@ const TripPlannerPage: React.FC = () => {
 
       <Paper sx={{ p: 2, mb: 3 }}>
         <Typography variant="h6" gutterBottom>
-          {t('tripPlanner.popularRoutes.title')}
+          {t('tripPlanner.popularRoutes.title', { defaultValue: 'Popular Routes' })}
         </Typography>
         <Grid container spacing={2}>
           {commonTrips.map((trip, index) => (
@@ -104,10 +104,10 @@ const TripPlannerPage: React.FC = () => {
                     {trip.route}
                   </Typography>
                   <Typography variant="body2">
-                    {t('tripPlanner.popularRoutes.from')}: {trip.from}
+                    {t('tripPlanner.popularRoutes.from', { defaultValue: 'From' })}: {trip.from}
                   </Typography>
                   <Typography variant="body2">
-                    {t('tripPlanner.popularRoutes.to')}: {trip.to}
+                    {t('tripPlanner.popularRoutes.to', { defaultValue: 'To' })}: {trip.to}
                   </Typography>
                 </CardContent>
               </Card>
@@ -120,19 +120,19 @@ const TripPlannerPage: React.FC = () => {
         <Grid container spacing={3}>
           <Grid item xs={12}>
             <Typography variant="subtitle1" gutterBottom>
-              {t('tripPlanner.locations.startingPoint')}
+              {t('tripPlanner.locations.startingPoint', { defaultValue: 'Starting Point' })}
             </Typography>
             <Autocomplete
               value={fromStop}
               onChange={(_, newValue) => setFromStop(newValue || '')}
               options={Object.values(popularLocations).flat().map(loc => loc.name)}
               renderInput={(params) => (
-                <TextField {...params} placeholder={t('tripPlanner.locations.selectLocation')} fullWidth />
+                <TextField {...params} placeholder={t('tripPlanner.locations.selectLocation', { defaultValue: 'Select or type a location' })} fullWidth />
               )}
             />
             <Box sx={{ mt: 2 }}>
               <Typography variant="subtitle2" gutterBottom>
-                {t('tripPlanner.locations.popularStartingPoints')}
+                {t('tripPlanner.locations.popularStartingPoints', { defaultValue: 'Popular starting points:' })}
               </Typography>
               <Stack direction="row" spacing={1} sx={{ flexWrap: 'wrap', gap: 1 }}>
                 {popularLocations.transitCenters.map((location) => (
@@ -150,19 +150,19 @@ const TripPlannerPage: React.FC = () => {
 
           <Grid item xs={12}>
             <Typography variant="subtitle1" gutterBottom>
-              {t('tripPlanner.locations.destination')}
+              {t('tripPlanner.locations.destination', { defaultValue: 'Destination' })}
             </Typography>
             <Autocomplete
               value={toStop}
               onChange={(_, newValue) => setToStop(newValue || '')}
               options={Object.values(popularLocations).flat().map(loc => loc.name)}
               renderInput={(params) => (
-                <TextField {...params} placeholder={t('tripPlanner.locations.selectLocation')} fullWidth />
+                <TextField {...params} placeholder={t('tripPlanner.locations.selectLocation', { defaultValue: 'Select or type a location' })} fullWidth />
               )}
             />
             <Box sx={{ mt: 2 }}>
               <Typography variant="subtitle2" gutterBottom>
-                {t('tripPlanner.locations.popularDestinations')}
+                {t('tripPlanner.locations.popularDestinations', { defaultValue: 'Popular destinations:' })}
               </Typography>
               <Stack spacing={2}>
                 {Object.entries(popularLocations).map(([category, locations]) => (
@@ -199,11 +199,19 @@ const TripPlannerPage: React.FC = () => {
               }}
               disabled={!fromStop || !toStop || loading}
             >
-              {loading ? t('tripPlanner.buttons.planningTrip') : t('tripPlanner.buttons.planTrip')}
+              {loading ? t('tripPlanner.buttons.planningTrip', { defaultValue: 'Planning Trip...' }) : t('tripPlanner.buttons.planTrip', { defaultValue: 'Plan Trip' })}
             </Button>
           </Grid>
         </Grid>
       </Paper>
+
+      <Button
+        variant="contained"
+        color="secondary"
+        sx={{ mt: 3 }}
+      >
+        {t('offlineAccess')}
+      </Button>
     </Box>
   );
 };
