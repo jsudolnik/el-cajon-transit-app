@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
-import { ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { BrowserRouter, useNavigate, Routes, Route } from 'react-router-dom';
 import CssBaseline from '@mui/material/CssBaseline';
-import { createTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
 import './i18n/config';
-import { 
-  Box, 
-  AppBar, 
-  Toolbar, 
-  Typography, 
+import {
+  Box,
+  AppBar,
+  Toolbar,
   Drawer,
   List,
   ListItem,
@@ -42,13 +40,22 @@ declare module 'i18next' {
 
 const theme = createTheme({
   palette: {
+    mode: 'dark',
+    background: {
+      default: '#000000',
+      paper: '#121212'
+    },
     primary: {
-      main: '#1976d2',
+      main: '#ffffff'
     },
     secondary: {
-      main: '#2196f3',
+      main: '#2196f3'
     },
-  },
+    text: {
+      primary: '#ffffff',
+      secondary: '#cccccc'
+    }
+  }
 });
 
 const drawerWidth = 240;
@@ -68,7 +75,7 @@ interface NavigationDrawerProps {
 const NavigationDrawer: React.FC<NavigationDrawerProps> = ({ menuItems, onClose, isMobile }) => {
   const navigate = useNavigate();
   const { t } = useTranslation();
-  
+
   return (
     <div>
       <Toolbar />
@@ -81,7 +88,7 @@ const NavigationDrawer: React.FC<NavigationDrawerProps> = ({ menuItems, onClose,
                 if (isMobile) onClose();
               }}
             >
-              <ListItemIcon>{item.icon}</ListItemIcon>
+              <ListItemIcon sx={{ color: 'inherit' }}>{item.icon}</ListItemIcon>
               <ListItemText primary={t(item.text as any)} />
             </ListItemButton>
           </ListItem>
@@ -114,7 +121,7 @@ function App() {
       <CssBaseline />
       <BrowserRouter>
         <Box sx={{ display: 'flex' }}>
-          <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
+          <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1, bgcolor: '#000' }}>
             <Toolbar>
               <IconButton
                 color="inherit"
@@ -124,14 +131,18 @@ function App() {
               >
                 <MenuIcon />
               </IconButton>
-              <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
-                {t('welcome.title' as any)}
-              </Typography>
+              <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
+                <img
+                  src="/ride-ready-logo.png"
+                  alt="Ride Ready"
+                  style={{ height: 48, objectFit: 'contain' }}
+                />
+              </Box>
               <FormControl size="small" sx={{ minWidth: 120, mr: 2 }}>
                 <Select
                   value={language}
                   onChange={handleLanguageChange}
-                  sx={{ 
+                  sx={{
                     color: 'white',
                     '& .MuiSelect-icon': { color: 'white' },
                     '& .MuiOutlinedInput-notchedOutline': { borderColor: 'white' },
@@ -159,11 +170,13 @@ function App() {
               '& .MuiDrawer-paper': {
                 width: drawerWidth,
                 boxSizing: 'border-box',
+                bgcolor: '#121212',
+                color: '#fff'
               },
             }}
           >
-            <NavigationDrawer 
-              menuItems={menuItems} 
+            <NavigationDrawer
+              menuItems={menuItems}
               onClose={() => setMobileOpen(false)}
               isMobile={isMobile}
             />
@@ -176,19 +189,12 @@ function App() {
               p: 3,
               width: { sm: `calc(100% - ${drawerWidth}px)` },
               mt: 8,
+              bgcolor: '#000',
+              minHeight: '100vh'
             }}
           >
             <Routes>
-              <Route path="/" element={
-                <>
-                  <Typography variant="h4" gutterBottom>
-                    {t('welcome.title' as any)}
-                  </Typography>
-                  <Typography variant="subtitle1">
-                    {t('welcome.subtitle' as any)}
-                  </Typography>
-                </>
-              } />
+              <Route path="/" element={<></>} />
               <Route path="/nearby" element={<NearbyStopsPage />} />
               <Route path="/plan" element={<TripPlannerPage />} />
               <Route path="/rides" element={<RideComparePage />} />
