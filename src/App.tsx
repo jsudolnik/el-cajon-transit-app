@@ -102,7 +102,7 @@ function App() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [language, setLanguage] = useState<string>('en');
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
 
   const menuItems: NavigationMenuItem[] = [
     { text: 'navigation.nearbyStops', icon: <DirectionsBusIcon />, path: '/nearby' },
