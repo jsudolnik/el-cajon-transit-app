@@ -190,11 +190,11 @@ pages: {
   }
 },
 }
-},
+}, 
 lng: 'en',
 fallbackLng: 'en',
 interpolation: {
-escapeValue: false
+  escapeValue: false
 }
 });
 export default i18n;
