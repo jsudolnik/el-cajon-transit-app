@@ -15,10 +15,10 @@ const NearbyStopsPage: React.FC = () => {
   return (
     <Box sx={{ p: 3 }}>
       <Typography variant="h4" gutterBottom>
-        {t('pages.nearbyStops.title')}
+        {t('pages.nearbyStops.title', { defaultValue: 'Nearby Transit Stops' })}
       </Typography>
       <Typography variant="subtitle1" gutterBottom>
-        {t('pages.nearbyStops.description')}
+        {t('pages.nearbyStops.description', { defaultValue: 'Find bus and train stops near you' })}
       </Typography>
 
       <Paper sx={{ p: 2, mt: 2 }}>
@@ -26,7 +26,7 @@ const NearbyStopsPage: React.FC = () => {
           {nearbyStops.map((stop) => (
             <ListItem key={stop.id}>
               <ListItemText
-                primary={t(stop.name)}
+                primary={t(stop.name, { defaultValue: stop.name })}
                 secondary={`${stop.distance} ${t('pages.nearbyStops.away', { defaultValue: 'away' })}`}
               />
             </ListItem>
@@ -39,7 +39,7 @@ const NearbyStopsPage: React.FC = () => {
         color="secondary"
         sx={{ mt: 3 }}
       >
-        {t('offlineAccess')}
+        {t('offlineAccess', { defaultValue: 'Offline Access Mode' })}
       </Button>
     </Box>
   );
